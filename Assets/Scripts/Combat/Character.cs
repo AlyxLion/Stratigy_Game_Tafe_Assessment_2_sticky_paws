@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Character : MonoBehaviour
 	public Type characterType;
 	public int maxHealth;
 	public int currentHealth;
+	public Text healthDisplay;
+	public bool hasAttacked;
 
 	private void Start()
 	{
@@ -29,6 +32,9 @@ public class Character : MonoBehaviour
 		{
 			attackDisplay.SetActive(true);
 		}
+
+		healthDisplay.text = currentHealth.ToString();
+		
 		for(int i = 0; i < abilities.Length; i++)
 		{
 			moveset.attacks[i].attackName.text = abilities[i].abilityName;

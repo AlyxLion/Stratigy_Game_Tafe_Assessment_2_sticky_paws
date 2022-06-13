@@ -28,9 +28,8 @@ public class EnemyAttack : MonoBehaviour
 		return enemyTarget;
 	}
 
-	public void AttackPhase(int target)
+	public void AttackPhase() // Checks for advantage/disadvantage
 	{
-		target = enemyTarget;
 		foreach(Enemy t in enemies)
 		{
 			if(players[enemyTarget].characterType == Type.Magic)
