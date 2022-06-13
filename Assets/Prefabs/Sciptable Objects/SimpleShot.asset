@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SimpleShot
   m_EditorClassIdentifier: 
   abilityName: Simple Shot
-  description: Fire a bolt from a crossbow
+  description: Fire a bolt
   icon: {fileID: 8121457865107855521, guid: 44aabd8f43d8e7d40a293662ccaa246a, type: 3}
   damage: 40
   PP: 30

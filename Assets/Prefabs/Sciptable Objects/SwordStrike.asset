@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SwordStrike
   m_EditorClassIdentifier: 
   abilityName: Sword Strike
-  description: A firm blow from a sharp blade
+  description: A firm strike
   icon: {fileID: 21300000, guid: 0624feba41c7bda41b03df39ffd1165a, type: 3}
   damage: 75
   PP: 6

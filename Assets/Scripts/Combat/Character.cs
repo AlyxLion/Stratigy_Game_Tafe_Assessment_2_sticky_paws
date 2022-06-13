@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
 	[SerializeField] public Ability[] abilities = new Ability[3];
 	public int[] usesLeft = new int[3];
 	public PlayerAttack moveset;
+	public GameObject attackDisplay;
 
 	private void Start()
 	{
@@ -19,6 +20,10 @@ public class Character : MonoBehaviour
 
 	public void OnMouseDown()
 	{
+		if(!attackDisplay.activeInHierarchy)
+		{
+			attackDisplay.SetActive(true);
+		}
 		for(int i = 0; i < abilities.Length; i++)
 		{
 			moveset.attacks[i].attackName.text = abilities[i].abilityName;

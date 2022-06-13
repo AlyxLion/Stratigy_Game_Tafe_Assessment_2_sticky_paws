@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RockBlast
   m_EditorClassIdentifier: 
   abilityName: Rock Blast
-  description: A solid rock shot at high speed
+  description: Supersonic rock
   icon: {fileID: -2830093179121425409, guid: 44aabd8f43d8e7d40a293662ccaa246a, type: 3}
   damage: 60
   PP: 10

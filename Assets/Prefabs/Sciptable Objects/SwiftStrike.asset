@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SwiftStrike
   m_EditorClassIdentifier: 
   abilityName: Swift Strike
-  description: A rapid stab with the tip of a blade
+  description: A rapid stab
   icon: {fileID: 5236500361925838754, guid: 1fb5371f8eafc334096d9b6fc1e74709, type: 3}
   damage: 60
   PP: 10

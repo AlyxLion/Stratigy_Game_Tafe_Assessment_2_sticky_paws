@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Swipe
   m_EditorClassIdentifier: 
   abilityName: Swipe
-  description: Swing a sword wildly
+  description: Swing wildly
   icon: {fileID: -6771937968326771046, guid: 1fb5371f8eafc334096d9b6fc1e74709, type: 3}
   damage: 40
   PP: 30

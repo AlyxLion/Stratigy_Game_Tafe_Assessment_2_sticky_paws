@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MysticalFire
   m_EditorClassIdentifier: 
   abilityName: Mystical Fire
-  description: A blast of magical flame
+  description: Fiery magic blast
   icon: {fileID: -4029872243472812082, guid: d1a30bbadc3968f4ea3bffd0da33aada, type: 3}
   damage: 100
   PP: 5
