@@ -9,6 +9,9 @@ public class Character : MonoBehaviour
 	public int[] usesLeft = new int[3];
 	public PlayerAttack moveset;
 	public GameObject attackDisplay;
+	public Type characterType;
+	public int maxHealth;
+	public int currentHealth;
 
 	private void Start()
 	{
@@ -16,6 +19,8 @@ public class Character : MonoBehaviour
 		{
 			usesLeft[i] = abilities[i].PP;
 		}
+
+		currentHealth = maxHealth;
 	}
 
 	public void OnMouseDown()
