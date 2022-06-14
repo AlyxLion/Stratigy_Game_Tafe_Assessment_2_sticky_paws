@@ -47,60 +47,63 @@ public class EnemyAttack : MonoBehaviour
 	{
 		foreach(Enemy t in enemies)
 		{
-			if(players[enemyTarget].characterType == Type.Magic)
-			{
-				if(t.characterType == Type.Melee)
+            if (t.currentHealth > 0)
+            {
+				if (players[enemyTarget].characterType == Type.Magic)
 				{
-					enemyDamage = Mathf.RoundToInt(enemyDamage * 0.8f);
-					players[enemyTarget].currentHealth -= enemyDamage;
+					if (t.characterType == Type.Melee)
+					{
+						enemyDamage = Mathf.RoundToInt(enemyDamage * 0.8f);
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
+
+					if (t.characterType == Type.Ranged)
+					{
+						enemyDamage = Mathf.RoundToInt(enemyDamage * 1.2f);
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
+					if (t.characterType == Type.Magic)
+					{
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
 				}
 
-				if(t.characterType == Type.Ranged)
+				if (players[enemyTarget].characterType == Type.Melee)
 				{
-					enemyDamage = Mathf.RoundToInt(enemyDamage * 1.2f);
-					players[enemyTarget].currentHealth -= enemyDamage;
-				}
-				if (t.characterType == Type.Magic)
-				{
-					players[enemyTarget].currentHealth -= enemyDamage;
-				}
-			}
+					if (t.characterType == Type.Ranged)
+					{
+						enemyDamage = Mathf.RoundToInt(enemyDamage * 0.8f);
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
 
-			if(players[enemyTarget].characterType == Type.Melee)
-			{
-				if(t.characterType == Type.Ranged)
-				{
-					enemyDamage = Mathf.RoundToInt(enemyDamage * 0.8f);
-					players[enemyTarget].currentHealth -= enemyDamage;
-				}
-
-				if(t.characterType == Type.Magic)
-				{
-					enemyDamage = Mathf.RoundToInt(enemyDamage * 1.2f);
-					players[enemyTarget].currentHealth -= enemyDamage;
-				}
-				if (t.characterType == Type.Melee)
-				{
-					players[enemyTarget].currentHealth -= enemyDamage;
-				}
-			}
-
-			if(players[enemyTarget].characterType == Type.Ranged)
-			{
-				if(t.characterType == Type.Magic)
-				{
-					enemyDamage = Mathf.RoundToInt(enemyDamage * 0.8f);
-					players[enemyTarget].currentHealth -= enemyDamage;
+					if (t.characterType == Type.Magic)
+					{
+						enemyDamage = Mathf.RoundToInt(enemyDamage * 1.2f);
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
+					if (t.characterType == Type.Melee)
+					{
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
 				}
 
-				if(t.characterType == Type.Melee)
+				if (players[enemyTarget].characterType == Type.Ranged)
 				{
-					enemyDamage = Mathf.RoundToInt(enemyDamage * 1.2f);
-					players[enemyTarget].currentHealth -= enemyDamage;
-				}
-				if (t.characterType == Type.Ranged)
-				{
-					players[enemyTarget].currentHealth -= enemyDamage;
+					if (t.characterType == Type.Magic)
+					{
+						enemyDamage = Mathf.RoundToInt(enemyDamage * 0.8f);
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
+
+					if (t.characterType == Type.Melee)
+					{
+						enemyDamage = Mathf.RoundToInt(enemyDamage * 1.2f);
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
+					if (t.characterType == Type.Ranged)
+					{
+						players[enemyTarget].currentHealth -= enemyDamage;
+					}
 				}
 			}
 		}
