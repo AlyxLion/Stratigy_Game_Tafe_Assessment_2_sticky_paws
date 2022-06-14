@@ -33,10 +33,13 @@ public class PlayerAttack : MonoBehaviour
 					damage = Mathf.RoundToInt(damage * 1.2f);
 					currentEnemy.currentHealth -= damage;
 				}
-
 				if (currentEnemy.characterType == Type.Ranged)
 				{
 					damage = Mathf.RoundToInt(damage * 0.8f);
+					currentEnemy.currentHealth -= damage;
+				}
+				if (currentEnemy.characterType == Type.Magic)
+				{
 					currentEnemy.currentHealth -= damage;
 				}
 			}
@@ -53,6 +56,10 @@ public class PlayerAttack : MonoBehaviour
 					damage = Mathf.RoundToInt(damage * 0.8f);
 					currentEnemy.currentHealth -= damage;
 				}
+				if (currentEnemy.characterType == Type.Melee)
+				{
+					currentEnemy.currentHealth -= damage;
+				}
 			}
 			if (currentCharacter.abilities[0].type == Type.Ranged)
 			{
@@ -65,6 +72,10 @@ public class PlayerAttack : MonoBehaviour
 				if (currentEnemy.characterType == Type.Melee)
 				{
 					damage = Mathf.RoundToInt(damage * 0.8f);
+					currentEnemy.currentHealth -= damage;
+				}
+				if (currentEnemy.characterType == Type.Ranged)
+				{
 					currentEnemy.currentHealth -= damage;
 				}
 			}
@@ -87,10 +98,13 @@ public class PlayerAttack : MonoBehaviour
 					damage = Mathf.RoundToInt(damage * 1.2f);
 					currentEnemy.currentHealth -= damage;
 				}
-
 				if (currentEnemy.characterType == Type.Ranged)
 				{
 					damage = Mathf.RoundToInt(damage * 0.8f);
+					currentEnemy.currentHealth -= damage;
+				}
+				if (currentEnemy.characterType == Type.Magic)
+				{
 					currentEnemy.currentHealth -= damage;
 				}
 			}
@@ -107,6 +121,10 @@ public class PlayerAttack : MonoBehaviour
 					damage = Mathf.RoundToInt(damage * 0.8f);
 					currentEnemy.currentHealth -= damage;
 				}
+				if (currentEnemy.characterType == Type.Melee)
+				{
+					currentEnemy.currentHealth -= damage;
+				}
 			}
 			if (currentCharacter.abilities[1].type == Type.Ranged)
 			{
@@ -119,6 +137,10 @@ public class PlayerAttack : MonoBehaviour
 				if (currentEnemy.characterType == Type.Melee)
 				{
 					damage = Mathf.RoundToInt(damage * 0.8f);
+					currentEnemy.currentHealth -= damage;
+				}
+				if (currentEnemy.characterType == Type.Ranged)
+				{
 					currentEnemy.currentHealth -= damage;
 				}
 			}
@@ -141,10 +163,13 @@ public class PlayerAttack : MonoBehaviour
 					damage = Mathf.RoundToInt(damage * 1.2f);
 					currentEnemy.currentHealth -= damage;
 				}
-
 				if (currentEnemy.characterType == Type.Ranged)
 				{
 					damage = Mathf.RoundToInt(damage * 0.8f);
+					currentEnemy.currentHealth -= damage;
+				}
+				if (currentEnemy.characterType == Type.Magic)
+				{
 					currentEnemy.currentHealth -= damage;
 				}
 			}
@@ -161,6 +186,10 @@ public class PlayerAttack : MonoBehaviour
 					damage = Mathf.RoundToInt(damage * 0.8f);
 					currentEnemy.currentHealth -= damage;
 				}
+				if (currentEnemy.characterType == Type.Melee)
+				{
+					currentEnemy.currentHealth -= damage;
+				}
 			}
 			if (currentCharacter.abilities[2].type == Type.Ranged)
 			{
@@ -173,6 +202,10 @@ public class PlayerAttack : MonoBehaviour
 				if (currentEnemy.characterType == Type.Melee)
 				{
 					damage = Mathf.RoundToInt(damage * 0.8f);
+					currentEnemy.currentHealth -= damage;
+				}
+				if (currentEnemy.characterType == Type.Ranged)
+				{
 					currentEnemy.currentHealth -= damage;
 				}
 			}
