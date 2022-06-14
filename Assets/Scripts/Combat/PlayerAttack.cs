@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
 
 	public void ButtonOne()
     {
-        if (!currentCharacter.hasAttacked)
+        if (!currentCharacter.hasAttacked & currentCharacter.currentHealth > 0)
         {
 			int damage = currentCharacter.abilities[0].damage;
 			currentCharacter.usesLeft[0] -= 1;
@@ -87,7 +87,7 @@ public class PlayerAttack : MonoBehaviour
     }
 	public void ButtonTwo()
 	{
-		if (!currentCharacter.hasAttacked)
+		if (!currentCharacter.hasAttacked & currentCharacter.currentHealth > 0)
 		{
 			int damage = currentCharacter.abilities[1].damage;
 			currentCharacter.usesLeft[1] -= 1;
@@ -152,7 +152,7 @@ public class PlayerAttack : MonoBehaviour
 	}
 	public void ButtonThree()
 	{
-		if (!currentCharacter.hasAttacked)
+		if (!currentCharacter.hasAttacked & currentCharacter.currentHealth > 0)
 		{
 			int damage = currentCharacter.abilities[2].damage;
 			currentCharacter.usesLeft[2] -= 1;

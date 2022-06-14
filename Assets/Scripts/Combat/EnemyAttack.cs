@@ -29,6 +29,15 @@ public class EnemyAttack : MonoBehaviour
         {
 			enemyTarget = Random.Range(0, 3);
         }
+        while (players[enemyTarget].currentHealth <= 0)
+        {
+			enemyTarget = Random.Range(0, 3);
+            if (players[0].currentHealth <= 0 & players[1].currentHealth <= 0 & players[2].currentHealth <= 0)
+            {
+				print("Enemies win!");
+				break;
+            }
+        }
 		print(enemyTarget);
 		//return enemyTarget;
 		AttackPhase();
