@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
@@ -12,10 +12,19 @@ public class EnemyAttack : MonoBehaviour
 	private int enemyTarget;
 	private int lowestHP = 100;
 	public int enemyDamage = 40;
+	public GameObject winPanel;
+	public Text alienWin;
+	public Text humanWin;
 
 	public void Target() // Determines who to target
 	{
-		for(int i = 0; i < players.Length; i++) 
+		if (enemies[0].currentHealth <= 0 & enemies[1].currentHealth <= 0 & enemies[2].currentHealth <= 0)
+		{
+			print("Humans win!");
+			winPanel.SetActive(true);
+			humanWin.gameObject.SetActive(true);
+		}
+		for (int i = 0; i < players.Length; i++) 
 		{
 			players[i].hasAttacked = false;
 			hpPercentages[i] = (players[i].currentHealth / players[i].maxHealth) * 100;
@@ -34,7 +43,9 @@ public class EnemyAttack : MonoBehaviour
 			enemyTarget = Random.Range(0, 3);
             if (players[0].currentHealth <= 0 & players[1].currentHealth <= 0 & players[2].currentHealth <= 0)
             {
-				print("Enemies win!");
+				print("Aliens win!");
+				winPanel.SetActive(true);
+				alienWin.gameObject.SetActive(true);
 				break;
             }
         }
