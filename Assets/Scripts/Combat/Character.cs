@@ -38,7 +38,7 @@ public class Character : MonoBehaviour
 		for(int i = 0; i < abilities.Length; i++)
 		{
 			moveset.attacks[i].attackName.text = abilities[i].abilityName;
-			moveset.attacks[i].description.text = abilities[i].description + " - " + abilities[i].damage + " damage";
+			moveset.attacks[i].description.text = abilities[i].description + "\n" + abilities[i].damage + " damage";
 			moveset.attacks[i].icon.sprite = abilities[i].icon;
 			moveset.attacks[i].type.text = abilities[i].type.ToString();
 			moveset.attacks[i].PP.text = usesLeft[i] + "/" + abilities[i].PP;
