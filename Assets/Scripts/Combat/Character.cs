@@ -13,7 +13,9 @@ public class Character : MonoBehaviour
 	public Type characterType;
 	public int maxHealth;
 	public int currentHealth;
+	public string characterName;
 	public Text healthDisplay;
+	public Text nameDisplay;
 	public bool hasAttacked;
 
 	private void Start()
@@ -34,6 +36,7 @@ public class Character : MonoBehaviour
 		}
 
 		healthDisplay.text = currentHealth.ToString();
+		nameDisplay.text = characterName;
 		
 		for(int i = 0; i < abilities.Length; i++)
 		{

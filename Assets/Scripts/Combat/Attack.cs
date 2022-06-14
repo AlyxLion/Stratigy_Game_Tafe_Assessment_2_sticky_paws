@@ -12,7 +12,11 @@ public class Attack : MonoBehaviour
 		{
 			if(!allies[i].hasAttacked)
 			{
-				
+				int damage = allies[i].abilities[i].damage;
+				allies[i].hasAttacked = true;
+				print(allies[i].characterName);
+				print(allies[i].abilities[i].abilityName + " " + damage);
+				print(allies[i].abilities[i].PP);
 			}
 		}
 	}
