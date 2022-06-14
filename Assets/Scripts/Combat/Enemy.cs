@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public PlayerAttack attackInfo;
     public Type characterType;
     public int maxHealth;
     public int currentHealth;
@@ -24,6 +25,7 @@ public class Enemy : MonoBehaviour
         {
             attackDisplay.SetActive(true);
         }
+        attackInfo.currentEnemy = this;
         hpDisplay.text = currentHealth.ToString();
         typeDisplay.text = characterType.ToString();
     }

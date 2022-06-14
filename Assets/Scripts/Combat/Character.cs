@@ -37,6 +37,7 @@ public class Character : MonoBehaviour
 
 		healthDisplay.text = currentHealth.ToString();
 		nameDisplay.text = characterName;
+		moveset.currentCharacter = this;
 		
 		for(int i = 0; i < abilities.Length; i++)
 		{
