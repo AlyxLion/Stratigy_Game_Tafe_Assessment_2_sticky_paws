@@ -116,6 +116,7 @@ public class EnemyAttack : MonoBehaviour
 						players[enemyTarget].currentHealth -= enemyDamage;
 					}
 				}
+				players[enemyTarget].healthDisplay.text = players[enemyTarget].currentHealth.ToString();
 			}
 		}
 	}
